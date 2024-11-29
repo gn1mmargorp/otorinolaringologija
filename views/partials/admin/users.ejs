@@ -1,0 +1,67 @@
+<section class="admin-page-content-section">
+    <h3 class="section-title">USERS</h3>
+    <button class="add-new-user-button">Add New User</button>
+    <div class="add-new-user-form-wrapper">
+        <form id="add-new-user-form">
+            <h3>Add New User</h3>
+            <label for="admin-created-user-username">Username</label>
+            <input type="text" value="" id="admin-created-user-username">
+            <label for="admin-created-user-email">Email</label>
+            <input type="email" value="" id="admin-created-user-email">
+            <label for="admin-created-user-password">Password</label>
+            <input type="password" value="" id="admin-created-user-password">
+            <button type="submit">ADD NEW USER</button>
+            <span class="close-form-button">x</span>
+        </form>
+    </div>
+    <div class="edit-user-form-wrapper">
+        <form id="edit-user-form">
+            <h3>Edit User</h3>
+            <div>
+                <p>Current username: <span id="current-username"></span></p>
+                <label for="admin-modified-user-username">New</label>
+                <input type="text" value="" id="admin-modified-user-username">
+            </div>
+            <div>
+                <p>Current role: <span id="current-role"></span></p>
+                <label for="admin-modified-user-role">New</label>
+                <select id="admin-modified-user-role">
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            
+            <button class="edit-user-form-submit-button" type="submit">MODIFY</button>
+            <span class="close-form-button">x</span>
+        </form>
+    </div>
+    <% if (users.length > 0) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Role</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user => { %>
+                    <tr>
+                        <td class="current-id"><%= user._id %></td>
+                        <td class="current-role"><%= user.role %></td>
+                        <td class="current-username"><%= user.username %></td>
+                        <td><%= user.email %></td>
+                        <td>
+                            <button class="edit-user-button">Edit</button>
+                            <button data-user-id="<%= user._id %>" class="delete-user-button">Delete</button>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No users found...</p>
+    <% } %>
+</section>

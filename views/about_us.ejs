@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Yorkshire</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media_queries.css">
+</head>
+<body>
+    
+    <!-- header(navbar) -->
+    <header>
+        <a href="/">
+            <img id="logo" src="/images/logo.png" alt="Yorkshire Logo" title="Home">
+        </a>
+
+        <nav id="navbar">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/contact">CONTACT</a></li>
+                <li><a href="/about">ABOUT US</a></li>  
+                
+            </ul>
+        </nav>
+        
+        
+        <i id="hamburger-menu-icon" class="fa-solid fa-bars"></i>
+    </header>
+
+
+
+
+
+
+    <div class="about-us-header-background">
+        <h1>About Yorkshire</h1>
+    </div>
+    
+
+
+
+    <!-- about us -->
+    <section class="about-us-wrapper">
+
+        <h2>Our Story</h2>
+
+        <div class="paragraphs-wrapper">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, corporis recusandae officia exercitationem voluptates aperiam, numquam impedit obcaecati libero et hic explicabo distinctio minima veniam.
+            </p><br>
+            <p>Corporis dicta voluptate maiores repudiandae dolorem. Officia, id. Temporibus sed doloremque eaque distinctio, suscipit atque numquam accusantium quam aspernatur.</p><br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita nisi qui reprehenderit sint!</p>
+        </div>
+    
+        <div class="image">
+            <img src="/images/about_us_illustration.png" alt="">
+        </div>
+
+    
+    </section>
+
+
+
+
+
+    <!-- footer -->
+    <%- include('partials/shared/footer') %>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="/gsap/gsap_about_us.js"></script>
+    <script src="/js/about_us.bundle.js"></script>
+</body>
+</html>
