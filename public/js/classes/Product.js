@@ -2,7 +2,6 @@
 import Cart from './Cart.js';
 const shoppingCart = Cart.getInstance();
 
-console.log(BASE_URL);
 
 
 // Product handling class - fetching, displaying, filtering, sorting...
