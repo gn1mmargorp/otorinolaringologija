@@ -3,7 +3,7 @@ import Cart from './Cart.js';
 import BASE_URL from '../config/baseUrl.js';
 const shoppingCart = Cart.getInstance();
 
-
+console.log(BASE_URL);
 
 
 // Product handling class - fetching, displaying, filtering, sorting...
