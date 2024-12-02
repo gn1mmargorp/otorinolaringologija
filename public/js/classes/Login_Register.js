@@ -1,5 +1,5 @@
 import { showErrorMessage, hideErrorMessage, showFinalErrorMessage } from "../utils/inputValidation.js";
-import BASE_URL from '../config/baseUrl.js';
+
 
 
 class Login_Register {
@@ -30,7 +30,7 @@ class Login_Register {
                 return;
             }
 
-            const response = await fetch(`${BASE_URL}/api/signup`, {
+            const response = await fetch(`/api/signup`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -72,7 +72,7 @@ class Login_Register {
                 return;
             }
 
-            const response = await fetch(`${BASE_URL}/api/login`, {
+            const response = await fetch(`/api/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
