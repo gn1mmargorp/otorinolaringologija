@@ -65,6 +65,6 @@ app.get('/profile', (req, res) => {
 app.get('/product/:id', renderProductPage);
 
 
-app.listen(PORT, '0.0.0.0', () => {
+app.listen(PORT, () => {
     console.log(`Server is listening on PORT: ${PORT}`);
 });
