@@ -1,4 +1,3 @@
-const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 
@@ -10,10 +9,6 @@ module.exports = {
         index: './public/js/pages/index.js',
         product: './public/js/pages/product.js',
         profile: './public/js/pages/profile.js',
-    },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].bundle.js',
     },
     module: {
         rules: [
