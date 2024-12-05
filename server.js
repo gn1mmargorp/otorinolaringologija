@@ -74,4 +74,5 @@ app.get('/product/:id', renderProductPage);
 
 app.listen(PORT, () => {
     console.log(`Server is listening on PORT: ${PORT}`);
+    console.log(process.env.NODE_ENV);
 });
