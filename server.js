@@ -19,13 +19,15 @@ const { renderProductPage } = require('./src/controllers/productController');
 
 app.use(express.json());
 app.use(cors());
-app.set('view engine', 'ejs');
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('dist/prod'));
+    app.use(express.static(path.join(__dirname, 'dist')));
 } else {
-    app.use(express.static('dist/dev'));
+    app.use(express.static(path.join(__dirname, 'public')));
 }
+
+app.set('view engine', 'ejs');
+
 
 
 async function connectToDatabase() {

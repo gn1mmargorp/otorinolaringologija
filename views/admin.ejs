@@ -74,5 +74,6 @@
         <script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.0.0/build/jwt-decode.min.js"></script>
         <!-- <script src="js/gsap/gsap_index.js"></script> -->
         <script src="/js/admin.bundle.js" type="module"></script>
+        <script src="<%= process.env.NODE_ENV === 'production' ? '/js/admin.bundle.js' : '/js/admin.js' %>" type="module"></script>
     </body>
 </html>
