@@ -18,6 +18,6 @@ module.exports = merge(common, {
         filename: 'js/[name].bundle.js',
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(), 
+
     ],
 });
